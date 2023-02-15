@@ -1,6 +1,16 @@
 {
     "name": "thakladd/phenerics",
     "description": "A package to create some kind of generics in PHP.",
+    "keywords": [
+        "PHP",
+        "Generics",
+        "Collection",
+        "Array",
+        "Arrays",
+        "Lists",
+        "List"
+    ],
+    "homepage": "https://github.com/ThaKladd/Phenerics",
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -12,9 +22,13 @@
     "authors": [
         {
             "name": "John Larsen",
-            "email": "johninen@gmail.com"
+            "email": "johninen@gmail.com",
+            "homepage": "https://betweenmovies.com",
+            "role": "Developer"
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "php": ">=8.1"
+    }
 }
