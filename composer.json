@@ -1,0 +1,20 @@
+{
+    "name": "thakladd/phenerics",
+    "description": "A package to create some kind of generics in PHP.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Thakladd\\Phenerics\\": "src/"
+        },
+        "files": ["src/functions.php"]
+    },
+    "authors": [
+        {
+            "name": "John Larsen",
+            "email": "johninen@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
