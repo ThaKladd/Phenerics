@@ -37,14 +37,10 @@ function  printIntList(ArrayOfInteger  $list) {
 //Type hint comes from here
 $array = arrayOf('integer')([1, 2, 3, 4, 5]);
 printIntList($array); //Array ( [0] => 1 [1] => 2 [2] => 3 [3] => 4 [4] => 5 ) 
-echo  '<br>';
 print_r($array[1]); //2
-echo  '<br>';
 $array[] = 6;
 print_r($array[5]); //6
-echo  '<br>';
 print_r($array->get(2)); //3
-echo  '<br>';
 foreach ($array as $key => $value) {
     echo  $key  .  ': '  .  $value . ', '; //0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6,
 }

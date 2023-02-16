@@ -1,7 +1,6 @@
 <?php
 
 function arrayOf(string $type): Thakladd\Phenerics\Collection {
-
     $class_name = 'ArrayOf' . $type;
     if (!class_exists($class_name)) {
         $type_ok = preg_match('/^[a-zA-Z_\x80-\xff][a-zA-Z0-9_\x80-\xff]*$/', $type);
