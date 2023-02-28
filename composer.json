@@ -17,7 +17,9 @@
         "psr-4": {
             "Thakladd\\Phenerics\\": "src/"
         },
-        "files": ["src/functions.php"]
+        "files": [
+            "src/functions.php"
+        ]
     },
     "authors": [
         {
