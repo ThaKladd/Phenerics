@@ -2,13 +2,13 @@
 
 function arrayOf(string $type, bool $cache = false): Thakladd\Phenerics\Collection {
     $class_name = 'ArrayOf' . $type;
-    $class = '<?php class ' . $class_name . ' extends Thakladd\Phenerics\Collection {} ?>';
+    $class = '<?php class ' . $class_name . ' extends Thakladd\Phenerics\Collection {}';
     if (!class_exists($class_name)) {
         if (!checkClassName($type)) {
             throw new Thakladd\Phenerics\Exceptions\TypeNotValidException('Type "' . $type . '" is not a valid string.');
         }
         if (!$cache) {
-            eval($class);
+            eval('?>' . $class);
         } else {
             storeClass($class_name, $class);
         }
