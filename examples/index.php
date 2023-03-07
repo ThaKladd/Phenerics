@@ -29,7 +29,7 @@ function printTestList(ArrayOfTest $list) {
     print_r($list->all());
 }
 echo '<br>';
-$arrayOfTest = arrayOf('Test')([new Test('Hello'), new Test('On'), new Test('You')]);
+$arrayOfTest = arrayOf('Test', true)([new Test('Hello'), new Test('On'), new Test('You')]);
 $arrayOfTest->add(3, new Test('You'));
 $arrayOfTest[] = new Test('Old');
 $arrayOfTest['assoc'] = new Test('Glue');
