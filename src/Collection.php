@@ -38,17 +38,17 @@ class Collection implements \Iterator, \ArrayAccess, \Countable {
         $key = $item ? $key : null;
 
         $type_match = $this->getType($item) === $this->type;
-        if ($type_match) {
-            if ($key) {
-                if (isset($this->list[$key])) {
-                    throw new KeyExistsException('Key "' . $key . '" exists. Use replace method to add on existing keys.');
-                }
-                $this->list[$key] = $item;
-            } else {
-                $this->list[] = $item;
-            }
-        } else {
+        if (!$type_match) {
             throw new WrongTypeException('Wrong type in array. "' . $this->type . '" expected. "' . gettype($item) . '" was gotten.');
+        }
+
+        if ($key) {
+            if (isset($this->list[$key])) {
+                throw new KeyExistsException('Key "' . $key . '" exists. Use replace method to add on existing keys.');
+            }
+            $this->list[$key] = $item;
+        } else {
+            $this->list[] = $item;
         }
     }
 
